@@ -1,5 +1,4 @@
 // TODO: Include packages needed for this application
-
 const inquirer = require('inquirer');
 const fs = require('fs');
 inquirer
@@ -43,7 +42,7 @@ const questions = [
     type: 'checkbox',
     message: 'What is the appropriate license for your project?',
     name: 'license',
-    choices: ['None', 'MIT License', 'other'],
+    choices: ['None', 'Apache License 2.0', 'Boost Software License 1.0', 'BSD 2-Clause \"Simplified\" License', 'BSD 3-Clause \"New\" or \"Revised\" License', 'Creative Commons Zero v1.0 Universal', 'Eclipse Public License 2.0', 'GNU General Public License v2.0', 'GNU General Public License v3.0', 'MIT License', 'Mozilla Public License 2.0', 'The Unlicense'],
   },
   {
     type: 'input',
@@ -69,15 +68,9 @@ function writeToFile(fileName, data) {
     if (err) {
       return console.log(err);
     }
-
-    console.log("Success, lookit yer readme");
+    console.log("Success, go look at your readme");
   })
 }
-
-// Write to the file with anything you pass in as process.argv[2]
-// fs.writeFile('log.txt', process.argv[2], (err) =>
-//   err ? console.error(err) : console.log('Success!')
-// );
 
 
 // TODO: Create a function to initialize app
@@ -85,9 +78,10 @@ function init() {
   inquirer.prompt(questions)
     .then(function (userInput) {
       console.log(userInput)
-      writeToFile("README.md", generateMarkdown(userInput));
+      writeToFile("README.md", generateMarkdown(userInput))
     });
 }
+
 
 // Function to initialize app
 init();

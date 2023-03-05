@@ -47,46 +47,79 @@ function renderLicenseLink(license) {
     return "";
 
   } else if (license == "Apache License 2.0") {
-    return "![License link](https://opensource.org/licenses/Apache-2.0)";
+    return "[opensource.org](https://opensource.org/licenses/Apache-2.0)";
 
   } else if (license == "Boost Software License 1.0") {
-    return "![License link](https://www.boost.org/LICENSE_1_0.txt)";
+    return "[boost.org](https://www.boost.org/LICENSE_1_0.txt)";
 
   } else if (license == "BSD 2-Clause \"Simplified\" License") {
-    return "![License link](https://opensource.org/licenses/BSD-2-Clause)";
+    return "[opensource.org](https://opensource.org/licenses/BSD-2-Clause)";
 
   } else if (license == "BSD 3-Clause \"New\" or \"Revised\" License") {
-    return "![License link](https://opensource.org/licenses/BSD-3-Clause)";
+    return "[opensource.org](https://opensource.org/licenses/BSD-3-Clause)";
 
   } else if (license == "Creative Commons Zero v1.0 Universal") {
-    return "![License link](http://creativecommons.org/publicdomain/zero/1.0/)";
+    return "[creativecommons.org](http://creativecommons.org/publicdomain/zero/1.0/)";
 
   } else if (license == "Eclipse Public License 2.0") {
-    return "![License link](https://opensource.org/licenses/EPL-2.0)";
+    return "[License link](https://opensource.org/licenses/EPL-2.0)";
 
   } else if (license == "GNU General Public License v2.0") {
-    return "![License link](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)";
+    return "[gnu.org](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)";
 
   } else if (license == "GNU General Public License v3.0") {
-    return "![GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0)";
+    return "[gnu.org](https://www.gnu.org/licenses/gpl-3.0)";
 
   } else if (license == "MIT License") {
-    return "![MIT License](https://opensource.org/licenses/MIT)";
+    return "[opensource.org](https://opensource.org/licenses/MIT)";
 
   } else if (license == "Mozilla Public License 2.0") {
-    return "![Mozilla Public License 2.0](https://opensource.org/licenses/MPL-2.0)";
+    return "[opensource.org](https://opensource.org/licenses/MPL-2.0)";
 
   } else if (license == "The Unlicense") {
-    return "![The Unlicense](http://unlicense.org/)";
+    return "[unlicense.org](http://unlicense.org/)";
   }
 }
 
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) { 
-  if (license !== "None") {
-    return `Covered under license: ${renderLicenseLink(data.license)}`
+function renderLicenseSection(license) {
+  if (license == "None") {
+    return "";
+
+  } else if (license == "Apache License 2.0") {
+    return "Apache License 2.0";
+
+  } else if (license == "Boost Software License 1.0") {
+    return "Boost Software License 1.0";
+
+  } else if (license == "BSD 2-Clause \"Simplified\" License") {
+    return "BSD 2-Clause \"Simplified\" License";
+
+  } else if (license == "BSD 3-Clause \"New\" or \"Revised\" License") {
+    return "BSD 3-Clause \"New\" or \"Revised\" License";
+
+  } else if (license == "Creative Commons Zero v1.0 Universal") {
+    return "Creative Commons Zero v1.0 Universal";
+
+  } else if (license == "Eclipse Public License 2.0") {
+    return "Eclipse Public License 2.0";
+
+  } else if (license == "GNU General Public License v2.0") {
+    return "GNU General Public License v2.0";
+
+  } else if (license == "GNU General Public License v3.0") {
+    return "GNU General Public License v3.0";
+
+  } else if (license == "MIT License") {
+    return "MIT License";
+
+  } else if (license == "Mozilla Public License 2.0") {
+    return "Mozilla Public License 2.0";
+
+  } else if (license == "The Unlicense") {
+    return "The Unlicense";
   }
 }
 
@@ -117,8 +150,11 @@ function generateMarkdown(data) {
   ## Testing
   ${data.test}<br><br>
 
+  ## Questions
+  Please reach out to [${data.email}](mailto:${data.email}) with any questions.<br><br>
+
   ## License
-  ${data.usage}
+  Licensed under ${renderLicenseSection(data.license)}. Learn more at ${renderLicenseLink(data.license)}.
 `;
 }
 

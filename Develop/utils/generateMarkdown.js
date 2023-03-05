@@ -147,11 +147,11 @@ function generateMarkdown(data) {
  ## Contributing
   ${data.contribute}<br><br>
 
-  ## Testing
+  ## Tests
   ${data.test}<br><br>
 
   ## Questions
-  Please reach out to [${data.email}](mailto:${data.email}) with any questions.<br><br>
+  This application was created by GitHub user [${data.username}](https://github.com/${data.username}). Please reach out to [${data.email}](mailto:${data.email}) with any questions.<br><br>
 
   ## License
   Licensed under ${renderLicenseSection(data.license)}. Learn more at ${renderLicenseLink(data.license)}.

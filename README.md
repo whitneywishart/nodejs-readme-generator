@@ -1,3 +1,21 @@
-# Professional README Generator Starter Code
+# Professional README Generator
 
-[How to create a Professional README](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
+## What
+Automatically generate a README.md file for GitHub projects based on command line user input.<br><br>
+
+## Why
+Practicing a common Node.js application using the Inquirer package.<br><br>
+
+## Usage
+Answer command line prompts to generate a README with information including:
+* Title
+* Description
+* Table of contents
+* Installation
+* Usage
+* Contributing
+* Testing
+* Questions
+* Licensing
+
+

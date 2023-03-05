@@ -54,11 +54,6 @@ const questions = [
     message: 'What is your email address?',
     name: 'email',
   },
-  {
-    type: 'input',
-    message: 'What should be included in your Table of Contents',
-    name: 'toc',
-  },
 ];
 
 
@@ -68,7 +63,7 @@ function writeToFile(fileName, data) {
     if (err) {
       return console.log(err);
     }
-    console.log("Success, go look at your readme");
+    console.log("Success! Your README.md has been generated.");
   })
 }
 

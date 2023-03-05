@@ -18,4 +18,4 @@ Answer command line prompts to generate a README with information including:
 * Questions
 * Licensing
 
-
+View the [walkthrough](https://drive.google.com/file/d/1_e_FP_7UkbcZ_IPNMpnJMief4-ZbZ7Yl/view) video.

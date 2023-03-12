@@ -20,7 +20,7 @@
  ## Contributing
   Contribute directions<br><br>
 
-  ## Tests
+  ## Testing
   Testing directions<br><br>
 
   ## Questions
